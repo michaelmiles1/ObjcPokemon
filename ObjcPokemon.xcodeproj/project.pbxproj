@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C60B4B2289B9FA400DFE89F /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60B4B1289B9FA400DFE89F /* Pokemon.m */; };
 		5CA63DEE289B5208000943C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA63DED289B5208000943C1 /* AppDelegate.m */; };
 		5CA63DF1289B5208000943C1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA63DF0289B5208000943C1 /* SceneDelegate.m */; };
 		5CA63DF4289B5208000943C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA63DF3289B5208000943C1 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C60B4B1289B9FA400DFE89F /* Pokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pokemon.m; sourceTree = "<group>"; };
+		5C60B4B3289B9FB400DFE89F /* Pokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
 		5CA63DE9289B5208000943C1 /* ObjcPokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcPokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA63DEC289B5208000943C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CA63DED289B5208000943C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C60B4AF289B9F5000DFE89F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C60B4B3289B9FB400DFE89F /* Pokemon.h */,
+				5C60B4B1289B9FA400DFE89F /* Pokemon.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C60B4B0289B9F5C00DFE89F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5CA63DF5289B5208000943C1 /* Main.storyboard */,
+				5CA63DFA289B5208000943C1 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5CA63DE0289B5207000943C1 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				5CA63E06289B52C2000943C1 /* App */,
+				5C60B4AF289B9F5000DFE89F /* Model */,
+				5C60B4B0289B9F5C00DFE89F /* View */,
 				5CA63E05289B52B3000943C1 /* Controller */,
 			);
 			path = ObjcPokemon;
@@ -83,9 +106,7 @@
 				5CA63DED289B5208000943C1 /* AppDelegate.m */,
 				5CA63DEF289B5208000943C1 /* SceneDelegate.h */,
 				5CA63DF0289B5208000943C1 /* SceneDelegate.m */,
-				5CA63DF5289B5208000943C1 /* Main.storyboard */,
 				5CA63DF8289B5208000943C1 /* Assets.xcassets */,
-				5CA63DFA289B5208000943C1 /* LaunchScreen.storyboard */,
 				5CA63DFD289B5208000943C1 /* Info.plist */,
 				5CA63DFE289B5208000943C1 /* main.m */,
 			);
@@ -165,6 +186,7 @@
 				5CA63DF4289B5208000943C1 /* ViewController.m in Sources */,
 				5CA63DEE289B5208000943C1 /* AppDelegate.m in Sources */,
 				5CA63DFF289B5208000943C1 /* main.m in Sources */,
+				5C60B4B2289B9FA400DFE89F /* Pokemon.m in Sources */,
 				5CA63DF1289B5208000943C1 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
