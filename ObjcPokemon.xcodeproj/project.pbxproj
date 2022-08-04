@@ -310,7 +310,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 757N5X329U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ObjcPokemon/Info.plist;
+				INFOPLIST_FILE = ObjcPokemon/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -337,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 757N5X329U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ObjcPokemon/Info.plist;
+				INFOPLIST_FILE = ObjcPokemon/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
