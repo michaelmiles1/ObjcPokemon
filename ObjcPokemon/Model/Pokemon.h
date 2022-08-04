@@ -10,5 +10,8 @@
 @interface Pokemon : NSObject
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) NSInteger *pokedexNumber;
+
+-(instancetype)initWithName:(NSString*)name pokedexNumber:(NSInteger*)pokedexNumber;
 
 @end
