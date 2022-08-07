@@ -37,8 +37,10 @@
                 for (NSDictionary* dictItem in pokeArray) {
                     NSString *name = [dictItem[@"name"] capitalizedString];
                     NSURLComponents *pokeURL = [[NSURLComponents alloc] initWithString:dictItem[@"url"]];
-                    NSArray *pathComponents = [pokeURL.path componentsSeparatedByString:@"/"];
+                    NSMutableArray *pathComponents = [[pokeURL.path componentsSeparatedByString:@"/"] mutableCopy];
+                    [pathComponents removeObject:@""];
                     long number = [pathComponents.lastObject integerValue];
+                    NSLog(@"name - %@, number - %ld", name, number);
                     [completionArray addObject:[[Pokemon alloc] initWithName:name pokedexNumber:(int) number]];
                 }
                 completionHandler(completionArray);
