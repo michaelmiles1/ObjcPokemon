@@ -24,7 +24,9 @@
     self.tableView.dataSource = self;
     [Pokemon getPokemonFromServer:0 completionHandler:^(NSMutableArray *array) {
         self.pokemonData = array;
-        [self.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
     }];
 }
 

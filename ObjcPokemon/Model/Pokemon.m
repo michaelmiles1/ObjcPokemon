@@ -29,11 +29,23 @@
             NSDictionary *resultArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
             if (!resultArray) {
                 NSLog(@"Error parsing JSON: %@", jsonError);
+                completionHandler([[NSMutableArray alloc] init]);
             }
             else {
+                NSMutableArray *completionArray = [[NSMutableArray alloc] init];
                 NSArray *pokeArray = resultArray[@"results"];
-                NSLog(@"%@", pokeArray);
+                for (NSDictionary* dictItem in pokeArray) {
+                    NSString *name = [dictItem[@"name"] capitalizedString];
+                    NSURLComponents *pokeURL = [[NSURLComponents alloc] initWithString:dictItem[@"url"]];
+                    NSArray *pathComponents = [pokeURL.path componentsSeparatedByString:@"/"];
+                    long number = [pathComponents.lastObject integerValue];
+                    [completionArray addObject:[[Pokemon alloc] initWithName:name pokedexNumber:(int) number]];
+                }
+                completionHandler(completionArray);
             }
+        }
+        else {
+            completionHandler([[NSMutableArray alloc] init]);
         }
     }];
     
