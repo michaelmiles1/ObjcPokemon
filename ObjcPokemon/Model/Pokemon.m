@@ -21,4 +21,16 @@
     return self;
 }
 
++(void)getPokemonFromServer:(NSInteger *)offset {
+    NSURL *dataURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://pokeapi.co/api/v2/pokemon?offset=%ld", (long) offset]];
+    NSURLSessionDataTask *pokeListTask = [[NSURLSession sharedSession] dataTaskWithURL:dataURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error == NULL && data != NULL) {
+            NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", dataString);
+        }
+    }];
+    
+    [pokeListTask resume];
+}
+
 @end

@@ -13,5 +13,6 @@
 @property (nonatomic) NSInteger *pokedexNumber;
 
 -(instancetype)initWithName:(NSString*)name pokedexNumber:(NSInteger*)pokedexNumber;
++(void)getPokemonFromServer:(NSInteger *)offset;
 
 @end

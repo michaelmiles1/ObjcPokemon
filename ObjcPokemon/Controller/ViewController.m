@@ -22,6 +22,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [Pokemon getPokemonFromServer:0];
     self.pokemonData = [NSMutableArray arrayWithObjects:
                         [[Pokemon alloc] initWithName:@"Bulbasaur" pokedexNumber:(NSInteger*) 1],
                         [[Pokemon alloc] initWithName:@"Ivysaur" pokedexNumber:(NSInteger*) 2],
