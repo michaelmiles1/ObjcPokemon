@@ -9,7 +9,7 @@
 
 @implementation Pokemon
 
--(instancetype)initWithName:(NSString *)name pokedexNumber:(NSInteger *)pokedexNumber {
+-(instancetype)initWithName:(NSString *)name pokedexNumber:(int)pokedexNumber {
     // have to initialize the NSObject first
     self = [super init];
     
@@ -21,7 +21,7 @@
     return self;
 }
 
-+(void)getPokemonFromServer:(NSInteger *)offset {
++(void)getPokemonFromServer:(int)offset {
     NSURL *dataURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://pokeapi.co/api/v2/pokemon?offset=%ld", (long) offset]];
     NSURLSessionDataTask *pokeListTask = [[NSURLSession sharedSession] dataTaskWithURL:dataURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error == NULL && data != NULL) {

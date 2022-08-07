@@ -10,9 +10,9 @@
 @interface Pokemon : NSObject
 
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSInteger *pokedexNumber;
+@property (nonatomic) int pokedexNumber;
 
--(instancetype)initWithName:(NSString*)name pokedexNumber:(NSInteger*)pokedexNumber;
-+(void)getPokemonFromServer:(NSInteger *)offset;
+-(instancetype)initWithName:(NSString*)name pokedexNumber:(int)pokedexNumber;
++(void)getPokemonFromServer:(int)offset;
 
 @end

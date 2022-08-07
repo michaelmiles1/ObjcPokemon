@@ -22,13 +22,13 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [Pokemon getPokemonFromServer:0];
+    [Pokemon getPokemonFromServer:20];
     self.pokemonData = [NSMutableArray arrayWithObjects:
-                        [[Pokemon alloc] initWithName:@"Bulbasaur" pokedexNumber:(NSInteger*) 1],
-                        [[Pokemon alloc] initWithName:@"Ivysaur" pokedexNumber:(NSInteger*) 2],
-                        [[Pokemon alloc] initWithName:@"Venasaur" pokedexNumber:(NSInteger*) 3],
-                        [[Pokemon alloc] initWithName:@"Charmander" pokedexNumber:(NSInteger*) 4],
-                        [[Pokemon alloc] initWithName:@"Charmeleon" pokedexNumber:(NSInteger*) 5],
+                        [[Pokemon alloc] initWithName:@"Bulbasaur" pokedexNumber:1],
+                        [[Pokemon alloc] initWithName:@"Ivysaur" pokedexNumber:2],
+                        [[Pokemon alloc] initWithName:@"Venasaur" pokedexNumber:3],
+                        [[Pokemon alloc] initWithName:@"Charmander" pokedexNumber:4],
+                        [[Pokemon alloc] initWithName:@"Charmeleon" pokedexNumber:5],
                         nil];
 }
 
