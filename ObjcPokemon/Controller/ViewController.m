@@ -61,7 +61,7 @@
         self.isLoading = YES;
         [Pokemon getPokemonFromServer:(int)self.pokemonData.count + 1 completionHandler:^(NSMutableArray *array) {
             self.isLoading = NO;
-            self.pokemonData = array;
+            [self.pokemonData addObjectsFromArray:array];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
