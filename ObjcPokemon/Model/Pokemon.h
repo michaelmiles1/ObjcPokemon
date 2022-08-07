@@ -13,6 +13,6 @@
 @property (nonatomic) int pokedexNumber;
 
 -(instancetype)initWithName:(NSString*)name pokedexNumber:(int)pokedexNumber;
-+(void)getPokemonFromServer:(int)offset;
++(void)getPokemonFromServer:(int)offset completionHandler:(void (^)(NSMutableArray * array))completionHandler;
 
 @end

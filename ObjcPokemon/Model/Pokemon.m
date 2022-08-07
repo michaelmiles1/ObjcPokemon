@@ -21,12 +21,19 @@
     return self;
 }
 
-+(void)getPokemonFromServer:(int)offset {
++(void)getPokemonFromServer:(int)offset completionHandler:(void (^)(NSMutableArray * array))completionHandler {
     NSURL *dataURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://pokeapi.co/api/v2/pokemon?offset=%ld", (long) offset]];
     NSURLSessionDataTask *pokeListTask = [[NSURLSession sharedSession] dataTaskWithURL:dataURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error == NULL && data != NULL) {
-            NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"%@", dataString);
+            NSError *jsonError = nil;
+            NSDictionary *resultArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+            if (!resultArray) {
+                NSLog(@"Error parsing JSON: %@", jsonError);
+            }
+            else {
+                NSArray *pokeArray = resultArray[@"results"];
+                NSLog(@"%@", pokeArray);
+            }
         }
     }];
     
